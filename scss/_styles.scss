@@ -204,6 +204,13 @@ main {
     font-weight: bold;
     padding-bottom: 20px;
     padding-left: 25px;
+    line-height: 44px;
+    @include media(">=640px") {
+      font-size: 27px;
+      padding-bottom: 44px;
+      padding-left: 53px;
+      line-height: 44px;
+    }
   }
 }
 .link {
@@ -211,6 +218,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include media(">=640px") {
+    width: 365px;
+  }
   a {
     color: $textColor;
     opacity: 50%;
@@ -221,6 +231,10 @@ main {
     &:hover {
       text-decoration: underline;
     }
+    @include media(">=640px") {
+      font-size: 18px;
+      padding-left: 53px;
+    }
   }
   span {
     &:hover {
@@ -231,6 +245,9 @@ main {
     content: "\e906";
     color: $White;
     font-size: 10px;
+    @include media(">=640px") {
+      font-size: 16px;
+    }
   }
 }
 .slider {
@@ -238,17 +255,23 @@ main {
   height: 75px;
   display: flex;
   align-items: center;
+  @include media(">=640px") {
+    height: 150px;
+  }
   .txt {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 66%;
+    flex-basis: 75%;
     background: $BalticSea;
     h2 {
       font-size: 8px;
       color: $White;
       opacity: 50%;
+      @include media(">=640px") {
+        font-size: 15px;
+      }
     }
   }
   span {
@@ -256,7 +279,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 34%;
+    flex-basis: 25%;
     background: $MediumRedViolet;
     &:hover {
       cursor: pointer;
@@ -266,6 +289,9 @@ main {
     content: "\e906";
     color: $White;
     font-size: 14px;
+    @include media(">=640px") {
+      font-size: 25px;
+    }
   }
 }
 .gallery {
@@ -281,18 +307,30 @@ main {
     &:hover {
       cursor: pointer;
     }
+    @include media(">=640px") {
+      height: 553px;
+    }
   }
   .icon-right-arrow:before {
     content: "\e906";
     color: $White;
     font-size: 28px;
+    @include media(">=640px") {
+      font-size: 54px;
+    }
   }
 }
 .content {
   background: $Gallery;
   padding: 35px;
+  @include media(">=640px") {
+    padding: 70px;
+  }
   .website {
     padding-bottom: 25px;
+    @include media(">=640px") {
+      padding-bottom: 63px;
+    }
     a {
       text-decoration: none;
       color: $BlueChill;
@@ -301,15 +339,22 @@ main {
       &:hover {
         text-decoration: underline;
       }
+      @include media(">=640px") {
+        font-size: 21px;
+      }
     }
   }
-  p {
+  .text-content p {
     color: $Emperor;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  @include media(">=980px") {
-    columns: 370px 2;
-    column-gap: 74px;
+    font-size: 10px;
+    margin-bottom: 40px;
+    @include media(">=640px") {
+      font-size: 17px;
+      margin-bottom: 80px;
+    }
+    @include media(">=980px") {
+      columns: 370px 2;
+      column-gap: 74px;
+    }
   }
 }
