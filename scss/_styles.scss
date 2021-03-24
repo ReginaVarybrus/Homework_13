@@ -1,3 +1,8 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -70,7 +75,7 @@ main {
   width: 100%;
   align-items: center;
   padding-top: 50px;
-  transform: translate(0, -150vh);
+  transform: translate(0, -110vh);
   transition: transform 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   li {
     margin-bottom: 70px;
@@ -278,7 +283,7 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 26px;
     flex-basis: 75%;
     background: $BalticSea;
     h2 {
@@ -287,9 +292,11 @@ main {
       opacity: 50%;
       @include media(">=640px") {
         font-size: 15px;
+        padding-left: 54px;
       }
       @include media(">=980px") {
         font-size: 23px;
+        padding-left: 84px;
       }
     }
   }
