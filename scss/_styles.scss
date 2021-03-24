@@ -204,12 +204,12 @@ main {
     font-weight: bold;
     padding-bottom: 20px;
     padding-left: 25px;
-    line-height: 44px;
+    line-height: 21px;
     @include media(">=640px") {
-      font-size: 27px;
-      padding-bottom: 44px;
-      padding-left: 53px;
-      line-height: 44px;
+      @include intro(27px, 44px, 53px, 44px);
+    }
+    @include media(">=980px") {
+      @include intro(42px, 68px, 80px, 66px);
     }
   }
 }
@@ -220,6 +220,9 @@ main {
   align-items: center;
   @include media(">=640px") {
     width: 365px;
+  }
+  @include media(">=980px") {
+    width: 565px;
   }
   a {
     color: $textColor;
@@ -235,6 +238,10 @@ main {
       font-size: 18px;
       padding-left: 53px;
     }
+    @include media(">=980px") {
+      font-size: 25px;
+      padding-left: 80px;
+    }
   }
   span {
     &:hover {
@@ -248,6 +255,9 @@ main {
     @include media(">=640px") {
       font-size: 16px;
     }
+    @include media(">=980px") {
+      font-size: 25px;
+    }
   }
 }
 .slider {
@@ -257,6 +267,12 @@ main {
   align-items: center;
   @include media(">=640px") {
     height: 150px;
+  }
+  @include media(">=980px") {
+    height: 234px;
+  }
+  @include media(">=1024px") {
+    height: 245px;
   }
   .txt {
     height: 100%;
@@ -271,6 +287,9 @@ main {
       opacity: 50%;
       @include media(">=640px") {
         font-size: 15px;
+      }
+      @include media(">=980px") {
+        font-size: 23px;
       }
     }
   }
@@ -292,12 +311,22 @@ main {
     @include media(">=640px") {
       font-size: 25px;
     }
+    @include media(">=980px") {
+      font-size: 35px;
+    }
   }
 }
 .gallery {
   display: flex;
   flex-direction: column;
   width: 100%;
+  @include media(">=980px") {
+    flex-direction: row;
+    height: 283px;
+  }
+  @include media(">=1024px") {
+    height: 295px;
+  }
   span {
     height: 275px;
     display: flex;
@@ -309,6 +338,10 @@ main {
     }
     @include media(">=640px") {
       height: 553px;
+    }
+    @include media(">=980px") {
+      height: 100%;
+      flex-basis: 33%;
     }
   }
   .icon-right-arrow:before {
@@ -331,6 +364,9 @@ main {
     @include media(">=640px") {
       padding-bottom: 63px;
     }
+    @include media(">=980px") {
+      padding-bottom: 35px;
+    }
     a {
       text-decoration: none;
       color: $BlueChill;
@@ -348,13 +384,18 @@ main {
     color: $Emperor;
     font-size: 10px;
     margin-bottom: 40px;
+    line-height: 20px;
     @include media(">=640px") {
       font-size: 17px;
       margin-bottom: 80px;
+      line-height: 40px;
     }
     @include media(">=980px") {
+      font-size: 10px;
       columns: 370px 2;
       column-gap: 74px;
+      margin-bottom: 45px;
+      line-height: 26px;
     }
   }
 }
