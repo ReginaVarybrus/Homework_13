@@ -93,28 +93,68 @@ main {
     }
     & > ul {
       position: absolute;
-      left: 0;
+      left: -40px;
       top: 100%;
-      background: #1794ab;
+      background: $Mandy;
       display: none;
-      width: 200px;
+      width: 149px;
+      .triangle-up {
+        position: relative;
+        left: calc(50% - 5px);
+        bottom: 28px;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid $Mandy;
+      }
       & > li {
-        padding: 10px;
-
-        div > ul {
-          background: red;
+        padding-bottom: 21px;
+        padding-left: 6px;
+        padding-right: 8px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        & > a {
+          font-size: 14px;
+          font-family: "Open Sans", sans-serif;
+          color: $White;
+        }
+        div {
           position: absolute;
+          top: -24px;
           left: 100%;
-          top: 0;
-          width: 100px;
+          width: 159px;
+          height: 145px;
           display: none;
-          li {
-            padding: 10px;
-          }
-          &:hover {
-            & > ul {
-              display: block;
+          ul {
+            margin-left: 10px;
+            height: 100%;
+            background: $Mandy;
+            li {
+              padding: 10px 14px 0;
+              a {
+                font-size: 14px;
+
+                font-family: "Open Sans", sans-serif;
+                color: $White;
+              }
             }
+          }
+          .triangle-left {
+            position: relative;
+            top: 29px;
+            right: 2px;
+            width: 0;
+            height: 0;
+            display: block;
+            border: 6px solid transparent;
+            border-right: 6px solid $Mandy;
+          }
+        }
+        &:hover {
+          div {
+            display: block;
           }
         }
       }
@@ -122,6 +162,11 @@ main {
     &:hover {
       & > ul {
         display: block;
+      }
+      @include media("<=980px") {
+        & > ul {
+          display: none;
+        }
       }
     }
   }
@@ -131,14 +176,11 @@ main {
     height: 97px;
     padding-top: 0;
     background: none;
-    transform: 0s;
+    padding-left: 50px;
     li {
       font-size: 20px;
       margin-bottom: 0;
       padding-right: 30px;
-      &:first-child {
-        padding-left: 50px;
-      }
     }
     a {
       color: $textColor;
@@ -228,7 +270,7 @@ main {
 .intro {
   height: 175px;
   width: 100%;
-  background: linear-gradient(to right, #26b7c9, #1794ab);
+  background: linear-gradient(135deg, #7db9e8 0%, #19b4c6 0%, #078aa4 100%);
   display: flex;
   flex-direction: column;
   @include media(">=640px") {
