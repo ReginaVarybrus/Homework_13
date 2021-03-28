@@ -11,11 +11,11 @@ main {
   margin: auto;
   position: relative;
   @include media(">=980px") {
-    width: 980px;
+    max-width: 980px;
     margin: auto;
   }
   @include media(">=1024px") {
-    width: 1024px;
+    max-width: 1024px;
     margin: auto;
   }
 }
